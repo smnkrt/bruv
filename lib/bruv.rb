@@ -38,7 +38,8 @@ module Bruv
       private
 
       def raise_argument_error
-        raise BruvArgumentError, 'Number of arguments exceeds number of instance variables.'
+        message = "Number of arguments exceeds number of instance variables for: #{self.class.name}"
+        raise BruvArgumentError, message
       end
     end
   end

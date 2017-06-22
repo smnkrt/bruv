@@ -28,7 +28,8 @@ RSpec.describe Bruv do
   context "number of params exceeds number of defined variables" do
     subject { DummyClass.new(a, d, b, c, "1") }
     it "generates readers and assigns variables properly", :aggregate_failures do
-      expect { subject }.to raise_error(Bruv::BruvArgumentError)
+      message = "Number of arguments exceeds number of instance variables for: DummyClass"
+      expect { subject }.to raise_error(Bruv::BruvArgumentError, message)
     end
   end
 end
