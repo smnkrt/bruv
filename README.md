@@ -52,7 +52,7 @@ class MyClass
   attributes :type, :category
 end
 
-MyClass.new('tools', 'basic', 'bargain') # => Bruv::BruvArgumentError: Number of arguments exceeds number of instance variables.
+MyClass.new('tools', 'basic', 'bargain') # => Bruv::BruvArgumentError: Number of arguments exceeds number of instance variables for: MyClass
 ```
 
 ## License
